@@ -25,7 +25,6 @@ app.use(express.urlencoded({ limit:"50mb" }));
 const limiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 300 });
 app.use(limiter);
 
-
 // MongoDB connection
 mongoose.connect(process.env.MONGODB_CONNECTION, {autoIndex: true})
     .then(() => {

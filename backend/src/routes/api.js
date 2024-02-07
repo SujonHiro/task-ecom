@@ -1,10 +1,9 @@
 const express= require("express");
+const {getBrands} = require("../controller/BrandController");
+const {getCategories} = require("../controller/CategoryController");
 const router = express.Router();
 
-const WelcomeController=require("../controller/WelcomeController")
-
-
-// Define route for "/WelcomeAPI" endpoint
-router.get('/welcome',WelcomeController.WelcomeController);
+router.get('/brands',getBrands);
+router.get('/categories',getCategories);
 
 module.exports=router;
