@@ -7,9 +7,12 @@ const rateLimit = require('express-rate-limit');
 const helmet=require('helmet');
 const hpp= require ('hpp');
 const cors=require('cors');
+const cookieParser = require('cookie-parser');
 
 require("dotenv").config()
 
+// Use cookie parser middleware
+app.use(cookieParser());
 
 // Middleware
 app.use(cors());
