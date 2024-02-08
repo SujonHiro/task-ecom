@@ -1,0 +1,3 @@
+const adminLogin=(req,res)=>{
+
+}
